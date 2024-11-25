@@ -32,3 +32,4 @@ CREATE TABLE DependentDiscipline
 	CONSTRAINT FK_DD_DependentDescipline_2_Disciplines
 	FOREIGN KEY (dependent_discipline) REFERENCES Disciplines(discipline_id),
 );
+GO

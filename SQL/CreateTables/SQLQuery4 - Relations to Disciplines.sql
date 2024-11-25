@@ -31,7 +31,7 @@ CREATE TABLE CompleteDisciplines
 (
 	[group] INT,
 	discipline SMALLINT,
-	PRIMARY KEY (group, discipline),
+	PRIMARY KEY ([group], discipline),
 
 	CONSTRAINT FK_CD_Group
 	FOREIGN KEY ([group]) REFERENCES Groups(group_id),
