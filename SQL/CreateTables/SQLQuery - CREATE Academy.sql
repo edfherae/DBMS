@@ -1,5 +1,26 @@
-USE AcademySQL
+--DROP DATABASE AcademySQL_full
+
+CREATE DATABASE AcademySQL_full
+ON --Определяем свойства файла БД
+(
+	NAME = AcademySQL_full,
+	FILENAME = 'D:\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\AcademySQL_full.mdf',
+	SIZE = 8 MB, 
+	MAXSIZE = 500 MB,
+	FILEGROWTH = 8 MB
+)
+LOG ON --Свойства файла журнала транзакций
+(
+	NAME = AcademySQL_full_Log,
+	FILENAME = 'D:\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\AcademySQL_full_Log.ldf',
+	SIZE = 8 MB,
+	MAXSIZE = 500 MB,
+	FILEGROWTH = 8 MB
+)
+
+USE AcademySQL_full
 GO
+
 
 CREATE TABLE Directions
 (
@@ -108,52 +129,51 @@ CREATE TABLE CompleteDisciplines
 
 CREATE TABLE Schedule
 (
-	lesson_id INT PRIMARY KEY,
-	[date] DATE NOT NULL,
-	[time] TIME NOT NULL,
-	[group] INT NOT NULL,
-	discipline SMALLINT NOT NULL,
-	teacher INT NOT NULL,
-	spent BIT NOT NULL,
-	[subject] NVARCHAR(256),
-
-	CONSTRAINT FK_Schedule_group
-	FOREIGN KEY ([group]) REFERENCES Groups(group_id),
-
-	CONSTRAINT FK_Schedule_discipline
-	FOREIGN KEY (discipline) REFERENCES Disciplines(discipline_id),
-
-	CONSTRAINT FK_Schedule_teacher
-	FOREIGN KEY (teacher) REFERENCES Teachers(teacher_id)
+	lesson_id	BIGINT PRIMARY KEY IDENTITY(1,1),
+	[date]		DATE	NOT NULL,
+	[time]		TIME	NOT NULL,
+	[group]		INT		NOT NULL	CONSTRAINT FK_Schedule_Groups		FOREIGN KEY REFERENCES Groups(group_id),
+	discipline	SMALLINT NOT NULL	CONSTRAINT FK_Schedule_Disciplines	FOREIGN KEY REFERENCES Disciplines(discipline_id),
+	teacher		INT		NOT NULL	CONSTRAINT FK_Schedule_Teachers		FOREIGN KEY	REFERENCES Teachers(teacher_id),
+	spent		BIT		NOT NULL,
+	[subject] NVARCHAR(256)
 );
+
+CREATE TABLE AttendanceAndGrades
+(
+	student		INT		CONSTRAINT FK_Grades_Students FOREIGN KEY REFERENCES Students(student_id),
+	lesson		BIGINT	CONSTRAINT FK_Grades_Schedule FOREIGN KEY REFERENCES Schedule(lesson_id), --bigint
+	PRIMARY KEY (student, lesson),
+	present BIT NOT NULL,
+	grade_1	TINYINT CONSTRAINT CK_Grade_1 CHECK (grade_1 > 0 AND grade_1 <= 12),
+	grade_2	TINYINT CONSTRAINT CK_Grade_2 CHECK (grade_2 > 0 AND grade_2 <= 12)
+);
+
 
 CREATE TABLE Exams
 (
-	student INT,
-	lesson INT,
-	grade TINYINT, --constraint
+	student INT CONSTRAINT FK_Exams_Students FOREIGN KEY REFERENCES Students(student_id),
+	lesson BIGINT CONSTRAINT FK_Exams_Schedule FOREIGN KEY REFERENCES Schedule(lesson_id),
+	grade TINYINT CONSTRAINT CK_Grade CHECK (grade > 0 AND grade <= 12),
 	PRIMARY KEY (student, lesson),
-
-	CONSTRAINT FK_Exams_student
-	FOREIGN KEY (student) REFERENCES Students(student_id),
-
-	CONSTRAINT FK_Exams_lesson
-	FOREIGN KEY (lesson) REFERENCES Schedule(lesson_id)
 );
 
-CREATE TABLE Grades
+CREATE TABLE AssignedHomeWorks
 (
-	student INT,
-	lesson INT,
-	grade1 TINYINT NULL, --constraint
-	grade2 TINYINT NULL,
-	spent BIT NOT NULL,
-	PRIMARY KEY (student, lesson),
+	homework_id BIGINT PRIMARY KEY,
+	lesson BIGINT NOT NULL CONSTRAINT FK_AHW_Schedule FOREIGN KEY REFERENCES Schedule(lesson_id),
+	task NVARCHAR (MAX) NOT NULL,
+	deadline DATE NOT NULL CONSTRAINT CK_Deadline 
+	CHECK(DATEDIFF(DAY, CONVERT(DATE, GETDATE()), deadline) >=3 AND DATEDIFF(DAY, CONVERT(DATE, GETDATE()), deadline) < 32)
+);
 
-	CONSTRAINT FK_Grades_student
-	FOREIGN KEY (student) REFERENCES Students(student_id),
-
-	CONSTRAINT FK_Grades_lesson
-	FOREIGN KEY (lesson) REFERENCES Schedule(lesson_id)
+CREATE TABLE CompleteHomeWorks
+(
+	student INT CONSTRAINT FK_CHW_Student FOREIGN KEY REFERENCES Students(student_id),
+	homework BIGINT CONSTRAINT FK_CHW_AHW FOREIGN KEY REFERENCES AssignedHomeWorks(homework_id),
+	PRIMARY KEY (student, homework),
+	reporn NVARCHAR(MAX) NOT NULL,
+	reporn_date DATE NOT NULL,
+	grade TINYINT CONSTRAINT CK_HW_grade CHECK(grade > 0 AND grade <= 12)
 );
 GO

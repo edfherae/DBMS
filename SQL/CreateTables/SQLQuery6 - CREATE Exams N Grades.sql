@@ -1,4 +1,4 @@
-USE AcademySQL;
+USE AcademySQL
 GO
 
 CREATE TABLE Exams
