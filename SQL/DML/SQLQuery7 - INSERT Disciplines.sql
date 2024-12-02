@@ -1,5 +1,4 @@
-USE AcademySQL;
-
+USE PD_318_DML;
 
 INSERT Disciplines
 	(discipline_id, discipline_name, number_of_lessons)
@@ -11,4 +10,4 @@ VALUES
 	(5,				N'Основы разработки приложений с использованием Windows Forms и WPF', 15),
 	(6,				N'Теория баз данных. Программирование MS SQL Server', 10);
 
---SELECT * FROM Disciplines;
+SELECT * FROM Disciplines;

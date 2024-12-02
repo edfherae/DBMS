@@ -28,6 +28,18 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery1 - INSERT DIRECTIONS.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery10 - SELECT TeachersDisciplines.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery10 - SELECT TeachersDisciplines.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery11 - SELECT DisciplinesTeachers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery11 - SELECT DisciplinesTeachers.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery2 - INSERT GROUPS.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
@@ -57,6 +69,24 @@
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery6 - AGREGATION.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7 - INSERT Disciplines.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7 - INSERT Disciplines.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery8 - INSERT Teachers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery8 - INSERT Teachers.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery9 - INSERT TeachersDisciplines.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery9 - INSERT TeachersDisciplines.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
