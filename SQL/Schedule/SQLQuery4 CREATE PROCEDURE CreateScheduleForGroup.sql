@@ -14,7 +14,7 @@ BEGIN
 	DECLARE @group_id		AS INT		= (SELECT group_id FROM Groups WHERE group_name = @group_name);
 	DECLARE @discipline_id	AS SMALLINT = (SELECT discipline_id FROM Disciplines WHERE discipline_name = @discipline_name);
 	DECLARE @time			AS TIME		= (SELECT learning_time FROM Groups WHERE group_id = @group_id);
-	DECLARE @teacher_id		AS SMALLINT	= (SELECT * FROM Teachers WHERE teacher_id = @teacher_number)
+	DECLARE @teacher_id		AS SMALLINT	= (SELECT teacher_id FROM Teachers WHERE teacher_id = @teacher_number)
 
 	INSERT INTO Schedule
 			([date],			[time], [group],	discipline,		teacher,		[subject],	spent)

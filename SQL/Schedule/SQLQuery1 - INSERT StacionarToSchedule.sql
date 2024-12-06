@@ -31,21 +31,31 @@ BEGIN
 
 	PRINT (@number_of_lesson);
 	PRINT(@time);
-	INSERT Schedule
-			([date], [time], [group], discipline, teacher, spent)
-	VALUES	(@date, @time, @group, @discipline, @teacher, IIF(@date < GETDATE(), 1, 0) )  ;
+	IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [date] = @date AND [time] = @time AND [group] = @group AND discipline = @discipline)
+	BEGIN
+		INSERT Schedule
+				([date], [time], [group], discipline, teacher, spent)
+		VALUES	(@date, @time, @group, @discipline, @teacher, IIF(@date < GETDATE(), 1, 0) )  ;
+	END
 	SET @number_of_lesson = @number_of_lesson + 1;
 	PRINT('-------------------');
 
+
 	PRINT (@number_of_lesson);
 	PRINT(DATEADD(MINUTE, 90, @time));
-	INSERT Schedule
-			([date], [time], [group], discipline, teacher, spent)
-	VALUES	(@date, DATEADD(MINUTE, 90, @time), @group, @discipline, @teacher, IIF(@date < GETDATE(), 1, 0) )  ;
+	IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [date] = @date AND [time] = DATEADD(MINUTE, 90, @time) AND [group] = @group AND discipline = @discipline)
+	BEGIN
+		INSERT Schedule
+				([date], [time], [group], discipline, teacher, spent)
+		VALUES	(@date, DATEADD(MINUTE, 90, @time), @group, @discipline, @teacher, IIF(@date < GETDATE(), 1, 0) )  ;
+	END
+
 	SET @number_of_lesson = @number_of_lesson + 1;
 	PRINT('===================');
 
 	SET @date = DATEADD(DAY, IIF(DATEPART(DW, @date) = 1 OR DATEPART(DW, @date) = 3, 2, 3), @date);
 END
 
-SELECT * FROM Schedule
+EXEC sp_ScheduleForGroup 'PV_318', '%MS SQL Server'
+
+SELECT COUNT(lesson_id) FROM Schedule WHERE [group] = @group AND discipline = @discipline

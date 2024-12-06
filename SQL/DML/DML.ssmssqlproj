@@ -40,6 +40,12 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery11 - SELECT DisciplinesTeachers.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery12 - INSERT Holidays.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery12 - INSERT Holidays.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery2 - INSERT GROUPS.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>

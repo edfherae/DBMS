@@ -46,11 +46,35 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery22 - CHECK PROCEDURES.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery3 - CREATE PROCEDUTE ScheduleForGroup.sql">
+        <FileNode Name="SQLQuery3 - CREATE PROCEDURE ScheduleForGroup.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery3 - CREATE PROCEDUTE ScheduleForGroup.sql</FullPath>
+          <FullPath>SQLQuery3 - CREATE PROCEDURE ScheduleForGroup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4 CREATE PROCEDURE CreateScheduleForGroup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4 CREATE PROCEDURE CreateScheduleForGroup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery44.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery44.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery5 - DELETE Schedules.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5 - DELETE Schedules.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery6 - StacionarToSchedule PROCEDURE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery6 - StacionarToSchedule PROCEDURE.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
