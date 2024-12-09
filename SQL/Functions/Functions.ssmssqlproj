@@ -28,6 +28,12 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery0 - CHECK FUNCTIONS.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery0 - CHECK Holidays.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery0 - CHECK Holidays.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery1 - CountLessonsForGroup.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
@@ -51,6 +57,18 @@
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery12 - GetLastMonthOfAYear.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery13 - INSERT MayHolidaysPROCEDURE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery13 - INSERT MayHolidaysPROCEDURE.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery13 - INSERT NewYearDaysPROCEDURE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery13 - INSERT NewYearDaysPROCEDURE.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
