@@ -3,7 +3,7 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="DESKTOP-OKGA20J\SQLEXPRESS:DESKTOP-OKGA20J\PC">
+        <ConnectionNode Name="DESKTOP-OKGA20J\SQLEXPRESS:Lenovo\Nout">
           <Created>2024-12-04T19:40:20.703943+03:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-OKGA20J\SQLEXPRESS</Server>
@@ -18,19 +18,34 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
         </ConnectionNode>
+        <ConnectionNode Name="LENOVO\SQLEXPRESS:Lenovo\Nout">
+          <Created>2024-12-09T18:35:47.3386723+03:00</Created>
+          <Type>SQL</Type>
+          <Server>LENOVO\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <HostNameInServerCertificate />
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="SQLQuery0 - CHECK FUNCTIONS.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery0 - CHECK FUNCTIONS.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery0 - CHECK Holidays.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery0 - CHECK Holidays.sql</FullPath>
         </FileNode>
@@ -58,6 +73,12 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery12 - GetLastMonthOfAYear.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery12 - SummerHolidaysPROCEDURE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery12 - SummerHolidaysPROCEDURE.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery13 - INSERT MayHolidaysPROCEDURE.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
@@ -65,10 +86,16 @@
           <FullPath>SQLQuery13 - INSERT MayHolidaysPROCEDURE.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery13 - INSERT NewYearDaysPROCEDURE.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery13 - INSERT NewYearDaysPROCEDURE.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery13 - Set DaysOFF.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery13 - Set DaysOFF.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

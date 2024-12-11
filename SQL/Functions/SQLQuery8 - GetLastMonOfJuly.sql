@@ -2,7 +2,7 @@ USE PD_318_DML
 GO
 ALTER FUNCTION GetLastMonOfJuly
 (
-@year AS INT
+	@year AS INT
 )
 RETURNS DATE
 AS

@@ -1,7 +1,7 @@
 USE PD_318_DML
 GO
 
-CREATE FUNCTION GetLastMonOfApril
+ALTER FUNCTION GetLastMonOfApril
 (
 	@year AS INT
 )

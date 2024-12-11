@@ -3,10 +3,25 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="DESKTOP-OKGA20J\SQLEXPRESS:DESKTOP-OKGA20J\PC">
+        <ConnectionNode Name="DESKTOP-OKGA20J\SQLEXPRESS:Lenovo\Nout">
           <Created>2024-11-22T18:54:33.517525+03:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-OKGA20J\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <HostNameInServerCertificate />
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="LENOVO\SQLEXPRESS:Lenovo\Nout">
+          <Created>2024-12-09T18:51:20.6466551+03:00</Created>
+          <Type>SQL</Type>
+          <Server>LENOVO\SQLEXPRESS</Server>
           <UserName />
           <Authentication>Windows Authentication</Authentication>
           <InitialDB />
@@ -70,9 +85,15 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery6 - CREATE Exams N Grades.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery8 - ALTER Holidays ADD Duration.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery8 - ALTER Holidays ADD Duration.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery8 - CREATE Holidays.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OKGA20J\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OKGA20J\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVO\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVO\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery8 - CREATE Holidays.sql</FullPath>
         </FileNode>

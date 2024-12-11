@@ -22,8 +22,8 @@ BEGIN
 
 	--SET @date = @start_date;
 
-	DECLARE @date		AS DATE = @start_date
-	DECLARE @number_of_lessons AS SMALLINT = 
+	DECLARE @date				AS DATE = @start_date
+	DECLARE @number_of_lessons	AS SMALLINT = 
 		(SELECT number_of_lessons FROM Disciplines WHERE discipline_id = @discipline)
 
 	PRINT(@number_of_lessons)
@@ -32,6 +32,13 @@ BEGIN
 	PRINT('===================');
 	WHILE (@number_of_lesson <= @number_of_lessons)
 	BEGIN
+		--не работает
+		IF (@date = (SELECT [date] FROM Schedule WHERE [date] = @date AND [time] = @time AND @group = [group]))
+		BEGIN
+			SET @date = DATEADD(DAY, IIF(DATEPART(DW, @date) = 1 OR DATEPART(DW, @date) = 3, 2, 3), @date);
+			CONTINUE;
+		END
+
 		PRINT(@date);
 		PRINT(DATENAME(WEEKDAY, @date));
 		PRINT(DATEPART(DW, @date));
