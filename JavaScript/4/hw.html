@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <script>
+        'use strict'
+        // 1:
+        // function Compare(a, b) {
+        //     return a < b ? -1 : a > b ? 1 : 0;
+        // }
+
+        // alert(Compare(+prompt("a"), +prompt("b")));
+
+        // 3:
+        // function JoinFunc(a, b, c) {
+        //     return [a, b, c].join("");
+        // }
+        // alert(JoinFunc(+prompt("a"), +prompt("b"), +prompt("c")));
+
+        // 5, 6:
+        // function IsPerfect(num) {
+        //     let dividerSum = 0;
+        //     for(let i = 1; i < num; i++) {
+        //         if(num % i == 0)dividerSum += i;
+        //     }
+        //     return num === dividerSum;
+        // }
+        
+        // function PerfectNumberDetector(bottom, top) {
+        //     let result = [];
+        //     for (let i = +bottom; i < +top; i++) {
+        //         if(IsPerfect(i))result.push(i);
+        //     }
+        //     return result;
+        // }
+        // alert(PerfectNumberDetector(+prompt("bottom"), +prompt("top")));
+
+        // 8, 9, 10:
+        function ToSec(hours, minutes, secs) {
+            return hours * 60 * 60 + minutes * 60 + secs;
+        }
+        function SecsToString(secs) {
+            let hours = Math.trunc(secs / 60 / 60); secs -= hours * 60 * 60;
+            let minutes = Math.trunc(secs / 60); secs -= minutes * 60;
+            return `${hours}:${minutes}:${secs}`;
+        }
+		function CalcDateDiff(hh1, mm1, ss1, hh2, mm2, ss2) {
+			return SecsToString(ToSec(hh1, mm1, ss1) - ToSec(hh2, mm2, ss2));
+		}
+		alert(CalcDateDiff(10, 10, 10, 8, 7, 6));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

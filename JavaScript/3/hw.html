@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    
+    <script>
+        'use strict'
+
+        // 1:
+        // let sum = 0;
+        // let bottom = +prompt("Введите нижнюю границу диапазона");
+        // let _top = +prompt("Введите верхнюю границу диапазона")
+        // for (let i = bottom; i < _top + 1; i++) {
+        //     sum += i;
+        // }
+        // alert(sum);
+
+        // 2:
+        // let num_1 = +prompt("Введите первое число");
+        // let num_2 = +prompt("Введите второе число");
+        // while (num_1 !== 0 && num_2 !== 0) {
+        //     if (num_1 > num_2) num_1 = num_1 % num_2;
+        //     else num_2 = num_2 % num_1;
+        // }
+        // alert(num_1 + num_2);
+
+        // 3:
+        // let arr = [];
+        // let number = +prompt("Введите число");
+        // for(let i = 0; i < number; i++) {
+            //     if(number % i == 0)arr.push(i);
+            // }
+            // alert(arr.join(", "));
+            
+
+        // 4:
+        // let number = +prompt("Введите число");
+        // let counter = 0;
+        // while (number > 0) {
+        //     number = Math.trunc(number /= 10);
+        //     counter++;
+        // }
+        // alert(counter);
+
+        // 10:
+        alert("Загадайте число от 1 до 100");
+        let answer = "";
+        let _top = 100;
+        let bottom = 0;
+        while (bottom <= _top) {
+            const center = Math.floor((bottom + _top) / 2);
+            answer = prompt(`Ваше число > ${center}, < ${center} или == ${center}?`).toLowerCase();
+            switch(answer) {
+                case "больше":
+                case ">":
+                    bottom = center + 1;
+                    break;
+                case "меньше":
+                case "<":
+                    _top = center - 1;
+                    break;
+                case "равно":
+                case "==":
+                case "=":
+                    alert(`Ваше число ${center}`);
+                    break;
+            }
+            
+            if (bottom === _top) {
+                const finalAnswer = prompt(`Это число ${bottom}? (Введите =)`);
+                if (finalAnswer === "=") {
+                    alert(`Ваше число ${bottom}`);
+                } else {
+                    alert("Кажется, вы где-то ошиблись");
+                }
+                break;
+            }
+        } 
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

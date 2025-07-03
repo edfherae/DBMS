@@ -1,0 +1,32 @@
+.light-theme {
+    --primary-color: #6b6bac;
+    --header-text-color: white
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .height-fit-content {
+    height: fit-content;
+} */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--header-text-color);
+    padding: 10px;
+    /* align-items: center; */
+}
+header .logo {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+header .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+

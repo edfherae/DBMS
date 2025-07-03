@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+    // 1: let age = parseInt(prompt('Введите ваш возраст:')); 
+    // let category; 
+    // if (age >= 0 && age < 12) { category = 'ребенок'; } 
+    // else if (age >= 12 && age <= 18) { category = 'подросток'; } 
+    // else if (age > 18 && age <= 60) { category = 'взрослый'; } 
+    // else if (age > 60) { category = 'пенсионер'; } 
+    // else { category = 'не определено'; } 
+    // console.log(category); 
+
+    // 2: const symbols = [')', '!', '@', '#', '$', '%', '^', '&', '*', '(']; 
+    // let num = +prompt('Введите число от 0 до 9); 
+    // if (num >= 0 && num <= 9) { console.log(symbols[num]); } 
+    // else { console.log('Ошибка'); } 
+
+    // 3: let number = prompt('Введите трехзначное число:'); 
+    // if (number.length === 3 && !isNaN(number)) { let digits = number.split('').map(Number); 
+    // console.log(digits[0] === digits[1] || digits[0] === digits[2] || digits[1] === digits[2] ? 'Есть одинаковые цифры' : 'Нет'); } 
+    // else { console.log('Неверный ввод'); } 
+
+    // 4: let year = +prompt('Введите год:'); 
+    // let isLeap = (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0); 
+    // console.log(isLeap ? 'Високосный' : 'Не високосный');
+
+    // 5: let num5 = prompt('Введите пятизначное число:'); 
+    // if (num5.length === 5 && !isNaN(num5)) { console.log(num5 === num5.split('').reverse().join('') ? 'Палиндром' : 'Не палиндром'); } 
+    // else { console.log('Неверный ввод'); } 
+    
+    // 6: let usd = parseFloat(prompt('Введите сумму в USD:')); 
+    // let currency = prompt('Выберите валюту (EUR, UAH, AZN):').toUpperCase(); 
+    // let rates = { EUR: 0.94, UAH: 39.42, AZN: 1.70 }; 
+    // console.log(rates[currency] ? (usd * rates[currency]).toFixed(2) : 'Ошибка'); 
+
+    // 7: let sum = parseFloat(prompt('Введите сумму покупки:')); 
+    // let discount = sum >= 500 ? 0.07 : sum >= 300 ? 0.05 : sum >= 200 ? 0.03 : 0; 
+    // console.log((sum * (1 - discount)).toFixed(2)); 
+
+    // 8: let L = parseFloat(prompt('Введите длину окружности:')); 
+    // let P = parseFloat(prompt('Введите периметр квадрата:')); console.log((L / Math.PI) <= (P / 4) ? 'Поместится' : 'Не поместится'); 
+
+    // 9: let score = 0; 
+    // let q1 = prompt('Столица Франции? 1. Париж 2. Лондон 3. Берлин') === '1' ? score += 2 : null; 
+    // let q2 = prompt('2+2*2? 1. 6 2. 8 3. 4') === '1' ? score += 2 : null; 
+    // let q3 = prompt('Какой язык программирования? 1. JS 2. HTML 3. CSS') === '1' ? score += 2 : null; 
+    // console.log(`Баллов: ${score}`); 
+
+    // 10: let day = parseInt(prompt('День:')); 
+    // let month = parseInt(prompt('Месяц:')) - 1; 
+    // let year10 = parseInt(prompt('Год:')); 
+    // let date = new Date(year10, month, day); 
+    // if (date.getMonth() !== month || date.getDate() !== day || date.getFullYear() !== year10) { console.log('Некорректная дата'); } 
+    // else { date.setDate(date.getDate() + 1); 
+    // console.log(`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`); } 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
